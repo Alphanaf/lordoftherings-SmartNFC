@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" id="WebApp_ID" version="3.0">
+  <display-name>LordofRings</display-name>
+  <servlet>
+    <servlet-name>HomeController</servlet-name>
+    <servlet-class>com.tsys.smartnfc.controller.HomeController</servlet-class>
+    <load-on-startup>0</load-on-startup>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>HomeController</servlet-name>
+    <url-pattern>/home</url-pattern>
+  </servlet-mapping>
+  
+ <servlet>
+   <servlet-name>PaymentController</servlet-name>
+   <servlet-class>com.tsys.smartnfc.controller.paymentController</servlet-class>
+</servlet>
+<servlet-mapping>
+   <servlet-name>PaymentController</servlet-name>
+   <url-pattern>/payment</url-pattern>
+</servlet-mapping>  
+  
+  <servlet>
+    <servlet-name>NFCController</servlet-name>
+    <servlet-class>com.tsys.smartnfc.controller.NfcController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>NFCController</servlet-name>
+    <url-pattern>/nfc</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>registrationController</servlet-name>
+    <servlet-class>com.tsys.smartnfc.controller.registrationController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>registrationController</servlet-name>
+    <url-pattern>/registration</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>fingerPrint</servlet-name>
+    <servlet-class>com.tsys.smartnfc.controller.FingerPrintController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>fingerPrint</servlet-name>
+    <url-pattern>/fingerPrint</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>H2Console</servlet-name>
+    <servlet-class>org.h2.server.web.WebServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>H2Console</servlet-name>
+    <url-pattern>/console/*</url-pattern>
+  </servlet-mapping>
+</web-app>
